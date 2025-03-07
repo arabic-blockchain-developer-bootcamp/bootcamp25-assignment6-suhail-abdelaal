@@ -3,9 +3,9 @@ pragma solidity ^0.8.13;
 
 contract Assignment6 {
     // 1. Declare an event called `FundsDeposited` with parameters: `sender` and `amount`
-    event FundsDeposited(address sender, uint256 amount);
+    event FundsDeposited(address indexed sender, uint256 amount);
     // 2. Declare an event called `FundsWithdrawn` with parameters: `receiver` and `amount`
-    event FundsWithdrawn(address receiver, uint256 amount);
+    event FundsWithdrawn(address indexed receiver, uint256 amount);
     // 3. Create a public mapping called `balances` to tracker users balances
     mapping(address userAddress => uint256 userBalance) public balances;
 
