@@ -33,7 +33,7 @@ contract Assignment6 {
     // - Take one parameter: `amount`
     // - Use the `hasEnoughBalance` modifier
     // - Emit the `FundsWithdrawn` event
-    function withdraw(uint256 amount) external {
+    function withdraw(uint256 amount) external hasEnoughBalance(amount) {
         // decrement user balance from balances mapping
         balances[msg.sender] -= amount;
         // send tokens to the caller
